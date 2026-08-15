@@ -1,6 +1,6 @@
 import streamlit as st
 import mysql.connector
-
+from pathlib import Path
 # -------------------------------------
 # PAGE CONFIG
 # -------------------------------------
@@ -61,11 +61,11 @@ section[data-testid="stSidebar"]{
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
-
-    st.image(
-    "assets/Rashtriya_Ispat_Nigam.svg",
-    width=140
-)
+    ASSETS_DIR = Path(__file__).resolve().parent.parent / "assets"
+    logo_path = ASSETS_DIR / "Rashtriya_Ispat_Nigam.svg"
+    st.image(str(logo_path), width=140)
+    
+    
     
 
 # -------------------------------------
