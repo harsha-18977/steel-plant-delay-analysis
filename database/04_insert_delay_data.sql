@@ -1,0 +1,2 @@
+-- Delay records are inserted dynamically
+-- through the Streamlit Add Delay module.
